@@ -1,7 +1,7 @@
 export default function City3DBackground() {
   return (
     <iframe
-      src="/city-3d/dist/index.html"
+      src="/city-3d/rendered/index.html"
       style={{
         position: 'fixed',
         inset: 0,
