@@ -47,7 +47,6 @@ function init() {
     var material = new THREE.MeshStandardMaterial({
       color:setTintColor(),
       wireframe:false,
-      shading: THREE.SmoothShading,
       side:THREE.DoubleSide});
     var wmaterial = new THREE.MeshLambertMaterial({
       color:0x67e8f9,
@@ -89,8 +88,6 @@ function init() {
   var pmaterial = new THREE.MeshPhongMaterial({
     color:0x000000,
     side:THREE.DoubleSide,
-    roughness: 10,
-    metalness: 0.6,
     opacity:0.9,
     transparent:true});
   var pelement = new THREE.Mesh(new THREE.PlaneGeometry(60,60), pmaterial);

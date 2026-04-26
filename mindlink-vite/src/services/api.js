@@ -4,11 +4,7 @@ const getBaseURL = () => {
     return import.meta.env.VITE_API_URL;
   }
 
-  const { hostname } = window.location;
-  // If we're on a local network IP, use that for the API too
-  if (hostname !== 'localhost' && hostname !== '127.0.0.1') {
-    return `http://${hostname}:5000/api`;
-  }
+  // Fallback for local development
   return 'http://localhost:5000/api';
 };
 
