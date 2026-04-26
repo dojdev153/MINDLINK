@@ -44,7 +44,7 @@ export default function Footer() {
             <div style={{ width: '12px', height: '12px', background: '#00c8d4', borderRadius: '3px' }} />
           </div>
           <span className="font-serif" style={{ fontSize: '22px', fontWeight: 700, color: 'white', letterSpacing: '0.05em', textShadow: '0 0 12px rgba(0,200,212,0.4)' }}>
-            MindLink
+            ChromaCare
           </span>
         </a>
         <div style={{ display: 'flex', gap: '24px' }}>
@@ -64,7 +64,7 @@ export default function Footer() {
         letterSpacing: '0.12em', marginBottom: '-2vh',
         pointerEvents: 'none',
       }}>
-        © 2026 MINDLINK. ALL RIGHTS RESERVED. KIGALI, RWANDA.
+        © 2026 CHROMACARE. ALL RIGHTS RESERVED. KIGALI, RWANDA.
       </p>
 
       {/* Giant Wordmark */}
@@ -90,7 +90,7 @@ export default function Footer() {
             color: 'transparent',
           }}
         >
-          MINDLINK
+          CHROMACARE
         </h1>
       </div>
     </footer>

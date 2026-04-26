@@ -26,7 +26,7 @@ export default function Success() {
           <div className="glass-card" style={{ padding: '40px', textAlign: 'center' }}>
             <div className="card-sheen" />
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '18px', lineHeight: '1.6', marginBottom: '32px', fontWeight: 300 }}>
-              Welcome to the inner circle. We've added you to the primary waitlist and will notify you via email as soon as the <span style={{ color: '#00c8d4' }}>MindLink mobile product</span> is ready for deployment.
+              Welcome to the inner circle. We've added you to the primary waitlist and will notify you via email as soon as the <span style={{ color: '#00c8d4' }}>ChromaCare mobile product</span> is ready for deployment.
             </p>
             
             <Link to="/" style={{

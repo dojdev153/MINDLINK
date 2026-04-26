@@ -54,7 +54,7 @@ export default function WaitlistSection() {
             Be Part of Something <span style={{ color: '#00c8d4', fontStyle: 'italic' }} className="text-glow">Bigger</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 300, fontSize: '18px', maxWidth: '600px', margin: '0 auto' }}>
-            MindLink is launching soon. Register now and get priority access when we go live.
+            ChromaCare is launching soon. Register now and get priority access when we go live.
           </p>
           {waitlistCount > 0 && (
             <p style={{ color: '#00c8d4', fontSize: '14px', fontWeight: 500, marginTop: '16px' }}>

@@ -30,12 +30,12 @@ const features = [
     icon: <ShieldCheck size={24} color="#00c8d4" />,
     title: 'Zero-Knowledge Privacy',
     shortDesc: 'Your data is encrypted locally. We cannot read your sessions.',
-    detailDesc: 'Your encryption keys never leave your device. Not even MindLink can read your sessions.',
+    detailDesc: 'Your encryption keys never leave your device. Not even ChromaCare can read your sessions.',
   },
   {
     icon: <Share2 size={24} color="#00c8d4" />,
     title: 'Automated Referrals',
-    shortDesc: 'If critical thresholds are met, MindLink bridges the gap to human professionals.',
+    shortDesc: 'If critical thresholds are met, ChromaCare bridges the gap to human professionals.',
     detailDesc: 'Direct integration with Caraes Ndera Hospital and 12 partner mental health clinics in Kigali',
   },
 ];
@@ -97,7 +97,7 @@ export default function FeaturesGrid() {
             Beyond a <span style={{ color: '#00c8d4', fontStyle: 'italic' }} className="text-glow">chatbot</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '18px', fontWeight: 300, lineHeight: 1.6 }}>
-            MindLink leverages multimodal AI to understand what you're saying, how you're saying it, and the physiological context behind it.
+            ChromaCare leverages multimodal AI to understand what you're saying, how you're saying it, and the physiological context behind it.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>

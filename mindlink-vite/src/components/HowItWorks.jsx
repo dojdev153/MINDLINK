@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   { num: '01', title: 'Open & Speak Freely', desc: 'Share your thoughts securely.', icon: <Mic size={24} color="#00c8d4" /> },
-  { num: '02', title: 'MindLink Listens', desc: 'AI analyzes vocal and text patterns.', icon: <Ear size={24} color="#00c8d4" /> },
+  { num: '02', title: 'ChromaCare Listens', desc: 'AI analyzes vocal and text patterns.', icon: <Ear size={24} color="#00c8d4" /> },
   { num: '03', title: 'Personalised Response', desc: 'Receive immediate CBT/DBT coping strategies.', icon: <Sparkles size={24} color="#00c8d4" /> },
   { num: '04', title: 'Bridge to Care', desc: 'Automated escalation to human professionals.', icon: <HeartHandshake size={24} color="#00c8d4" /> },
 ];

@@ -50,7 +50,7 @@ export default function Signup() {
             Create an <span style={{ color: '#00c8d4', fontStyle: 'italic' }} className="text-glow">Account</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 300, fontSize: '16px' }}>
-            Join MindLink and start your journey today.
+            Join ChromaCare and start your journey today.
           </p>
         </div>
 

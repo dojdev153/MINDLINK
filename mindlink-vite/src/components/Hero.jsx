@@ -12,7 +12,7 @@ export default function Hero() {
       justifyContent: 'center',
       zIndex: 1,
     }}>
-      {/* Giant MindLink heading */}
+      {/* Giant ChromaCare heading */}
       <h1 className="font-serif" style={{
         fontSize: 'clamp(48px, 8vw, 96px)',
         fontWeight: 700,
@@ -21,7 +21,7 @@ export default function Hero() {
         marginBottom: '20px',
         textAlign: 'center',
       }}>
-        MindLink
+        ChromaCare
       </h1>
 
       {/* Subtitle */}

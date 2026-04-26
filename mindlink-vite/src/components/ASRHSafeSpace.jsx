@@ -63,7 +63,7 @@ export default function ASRHSafeSpace() {
               viewport={{ once: true }}
               style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 300, fontSize: '18px', lineHeight: 1.7 }}
             >
-              Adolescent Sexual and Reproductive Health (ASRH) requires the utmost discretion. MindLink is engineered with a privacy-first architecture, ensuring that vulnerable youth can access vital information and support without fear of exposure.
+              Adolescent Sexual and Reproductive Health (ASRH) requires the utmost discretion. ChromaCare is engineered with a privacy-first architecture, ensuring that vulnerable youth can access vital information and support without fear of exposure.
             </motion.p>
           </div>
 

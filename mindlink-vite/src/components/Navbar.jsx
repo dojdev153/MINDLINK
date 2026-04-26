@@ -53,7 +53,7 @@ export default function Navbar() {
           textDecoration: 'none',
           textShadow: '0 0 12px rgba(0,200,212,0.4)',
         }}>
-          MindLink
+          ChromaCare
         </Link>
 
         {/* Nav Links */}

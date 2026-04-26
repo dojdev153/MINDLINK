@@ -2,11 +2,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: mindlink-postgres
+    container_name: chromacare-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: P0stin'guy
-      POSTGRES_DB: mindlink_db
+      POSTGRES_DB: chromacare_db
     ports:
       - "5432:5432"
     volumes:
