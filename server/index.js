@@ -16,15 +16,10 @@ app.use('/api/waitlist', waitlistRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-const start = async () => {
-  try {
-    const server = app.listen(process.env.PORT || 5000, () =>
-      console.log(`Server running on port ${process.env.PORT || 5000}`)
-    );
-    server.on('error', (e) => console.error('Server Error:', e));
-  } catch (err) {
-    console.error('Failed to start server:', err);
-  }
-};
+const PORT = process.env.PORT || 5000;
 
-start();
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;

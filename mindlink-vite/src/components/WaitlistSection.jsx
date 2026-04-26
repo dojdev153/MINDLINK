@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ChevronDown } from 'lucide-react';
 import { waitlistAPI } from '../services/api';
 
 export default function WaitlistSection() {
@@ -14,6 +15,7 @@ export default function WaitlistSection() {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     waitlistAPI.count()
@@ -29,6 +31,10 @@ export default function WaitlistSection() {
     try {
       await waitlistAPI.join(formData);
       setSubmitted(true);
+      // Wait a bit for the success animation then redirect
+      setTimeout(() => {
+        navigate('/success');
+      }, 2000);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -83,14 +89,41 @@ export default function WaitlistSection() {
                     <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="jane@example.com" className="glass-input" style={{ width: '100%', padding: '12px 16px', fontSize: '14px' }} />
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                    <div>
+                    <div style={{ position: 'relative' }}>
                       <label style={{ display: 'block', fontSize: '14px', color: 'rgba(255,255,255,0.7)', marginBottom: '8px' }}>Age Group</label>
-                      <select name="age_group" required value={formData.age_group} onChange={handleChange} className="glass-input" style={{ width: '100%', padding: '12px 16px', fontSize: '14px', background: 'rgba(255,255,255,0.06)' }}>
-                        <option value="" disabled>Select</option>
-                        <option value="15-18">15–18</option>
-                        <option value="19-24">19–24</option>
-                        <option value="25-30">25–30</option>
-                      </select>
+                      <div style={{ position: 'relative' }}>
+                        <select 
+                          name="age_group" 
+                          required 
+                          value={formData.age_group} 
+                          onChange={handleChange} 
+                          className="glass-input" 
+                          style={{ 
+                            width: '100%', 
+                            padding: '12px 16px', 
+                            fontSize: '14px', 
+                            appearance: 'none',
+                            cursor: 'pointer',
+                            background: 'rgba(255,255,255,0.03)',
+                          }}
+                        >
+                          <option value="" disabled style={{ background: '#050d0f' }}>Select</option>
+                          <option value="15-18" style={{ background: '#050d0f' }}>15–18</option>
+                          <option value="19-24" style={{ background: '#050d0f' }}>19–24</option>
+                          <option value="25-30" style={{ background: '#050d0f' }}>25–30</option>
+                        </select>
+                        <ChevronDown 
+                          size={16} 
+                          color="rgba(255,255,255,0.5)" 
+                          style={{ 
+                            position: 'absolute', 
+                            right: '12px', 
+                            top: '50%', 
+                            transform: 'translateY(-50%)', 
+                            pointerEvents: 'none' 
+                          }} 
+                        />
+                      </div>
                     </div>
                     <div>
                       <label style={{ display: 'block', fontSize: '14px', color: 'rgba(255,255,255,0.7)', marginBottom: '8px' }}>Location</label>

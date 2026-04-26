@@ -30,7 +30,7 @@ export default function Signup() {
     try {
       const data = await authAPI.signup({ full_name: fullName, email, password });
       login(data.token, data.refreshToken, data.user);
-      navigate('/success');
+      navigate('/');
     } catch (err) {
       setError(err.message);
     } finally {
