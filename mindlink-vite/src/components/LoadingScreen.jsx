@@ -39,7 +39,7 @@ export default function LoadingScreen() {
       opacity: isExiting ? 0 : 1,
       visibility: isExiting ? 'hidden' : 'visible'
     }}>
-      <div style={{ position: 'relative', width: '240px', height: '240px' }}>
+      <div style={{ position: 'relative', width: '160px', height: '160px' }}>
         {/* Neon Glow Background */}
         <div style={{
           position: 'absolute',
@@ -90,7 +90,7 @@ export default function LoadingScreen() {
           <div style={{
             position: 'relative',
             zIndex: 10,
-            fontSize: '48px',
+            fontSize: '32px',
             fontWeight: 800,
             color: progress > 50 ? '#050d0f' : '#00c8d4',
             transition: 'color 0.3s ease',
@@ -121,8 +121,8 @@ export default function LoadingScreen() {
               zIndex: zIndex,
               left: `${50 + (Math.cos(i * 30 * Math.PI / 180) * (90 + depth * 40))}%`,
               top: `${50 + (Math.sin(i * 30 * Math.PI / 180) * (90 + depth * 40))}%`,
-              animation: `float3D ${3 + Math.random() * 3}s infinite ease-in-out alternate`,
-              animationDelay: `${Math.random() * 2}s`
+              animation: `float3D ${8 + Math.random() * 6}s infinite ease-in-out alternate`,
+              animationDelay: `${Math.random() * 4}s`
             }} />
           );
         })}
