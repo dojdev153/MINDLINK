@@ -26,7 +26,6 @@ yarn-error.log*
 yarn-debug.log*
 
 # local env files
-.env
 .env*.local
 
 
@@ -37,3 +36,4 @@ yarn-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
+config.bat

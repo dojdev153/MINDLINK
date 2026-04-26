@@ -29,6 +29,7 @@ export default function Footer() {
       paddingTop: '96px', paddingBottom: 0, marginBottom: 0,
       background: 'transparent', overflow: 'hidden',
       display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'flex-end', minHeight: 'fit-content'
     }}>
       {/* Top row */}
       <div className="container" style={{
@@ -70,8 +71,8 @@ export default function Footer() {
       {/* Giant Wordmark */}
       <div style={{
         width: '100%', display: 'flex', justifyContent: 'center',
-        overflow: 'hidden', lineHeight: 0.85, paddingBottom: 0, marginBottom: 0,
-        userSelect: 'none', pointerEvents: 'none',
+        overflow: 'hidden', lineHeight: 0.8, paddingBottom: 0, marginBottom: 0,
+        userSelect: 'none', pointerEvents: 'none', marginTop: '40px',
       }}>
         <h1
           ref={wordmarkRef}
@@ -88,6 +89,7 @@ export default function Footer() {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             color: 'transparent',
+            transform: 'translateY(15%)',
           }}
         >
           CHROMACARE

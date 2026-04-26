@@ -1,81 +1,36 @@
-# 🧠 MindLink — Reconnecting Humanity Through AI
+# 🌈 ChromaCare — AI-Powered Mental Wellness for Youth
 
-**MindLink** is an AI-driven mental wellness platform that bridges the gap between emotional distress and timely support.  
-It uses **AI emotional intelligence**, **real-time mood recognition**, and **personalized coping guidance** to empower people to understand, track, and improve their mental health — one thought at a time.
-
----
-
-##  Vision 
-Our world is facing a silent epidemic — mental health crises, social isolation, and burnout.  
-MindLink aims to **make emotional support accessible**, **personalized**, and **empathetic** through responsible AI.
-
-We align with the following UN **Sustainable Development Goals (SDGs):**
-- **SDG 3:** Good Health & Well-being  
-- **SDG 9:** Industry, Innovation & Infrastructure  
-- **SDG 4:** Quality Education (through emotional literacy tools)  
-- **SDG 10:** Reduced Inequalities (AI for all, multilingual support)
+**ChromaCare** is a premium, privacy-first AI mental health platform designed specifically for the needs of modern youth. Built with a focus on **Adolescent Sexual and Reproductive Health (ASRH)** and general emotional well-being, ChromaCare provides a safe, anonymous space for young minds to find support, information, and clarity.
 
 ---
 
-##  How It Works
+## ✨ Vision
+In an era of increasing social isolation and mental health challenges, ChromaCare bridges the gap between distress and professional support. We leverage **Multimodal AI** (Voice + Text) to understand not just what you say, but how you feel.
 
-### AI Emotion Detection
-Users interact with **MindLink AI**, a conversational assistant powered by emotion-sensitive large language models.  
-It understands user sentiment from text or voice, identifies emotional tone, and responds with empathy.
-
-### Personalized Support
-The AI provides:
-- Guided breathing or mindfulness sessions   
-- Journaling prompts   
-
-- Mood visualization dashboards   
-- Suggestions for nearby therapists or counselors (optional API integration)   
-
-### Secure and Private
-All user data is encrypted and processed with privacy in mind — no cloud storage without consent.
+### Core Values:
+- **Privacy First:** End-to-end encryption and device-local processing.
+- **Utmost Discretion:** Engineered for ASRH support where anonymity is vital.
+- **Multimodal Empathy:** AI that understands emotional tone and physiological context.
+- **Safety Bridges:** Direct connection to human professionals in critical moments.
 
 ---
 
-##  Tech Stack
+## 🚀 Features
+- **AI Emotion Detection:** Understanding sentiment from vocal and text patterns.
+- **ASRH Safe Space:** Confidential access to reproductive health guidance.
+- **Mood Recognition:** Real-time physiological context analysis.
+- **Priority Waitlist:** Early access for the upcoming mobile product.
+- **Glassmorphism UI:** A stunning, premium aesthetic built with React & Framer Motion.
 
+---
 
+## 🛠 Tech Stack
 | Layer | Technology |
 |-------|-------------|
-| **Frontend** | React.js / Next.js + Tailwind CSS + Figma Design |
-| **AI Core** | OpenAI / Hugging Face Transformers (sentiment & chat models) |
-| **Backend** | Node.js (Express) + MongoDB / Firebase |
-| **Voice & Emotion** | Web Speech API / Whisper API for emotion detection |
-| **Version Control** | GitHub |
-| **Hosting** | Vercel / Render / Railway |
-
----
-
-##  Features
-
--  Emotion Recognition (Text & Voice)
--  Mood Tracker & History
--  Multilingual Support
--  AI Therapist Chatbot
--  Guided Exercises (Audio-based)
--  AI-Generated Mental Health Journals 
--  Secure, Anonymous Mode
-
----
-
-## 🧠 Why MindLink? 
-
-> “Mental health is not a luxury — it’s a necessity.”  
-MindLink leverages **AI empathy and data insight** to bring hope, calm, and clarity to millions silently struggling.
-
-Our platform redefines what digital wellness means — blending technology with humanity.
-
----
-
-## 👥 Team
-
-- **Founder & Lead Developer:** Chrisostom “Code888” Uhiriwe
-- **AI Research & Integration:** Mr. Chrisostom  
-- **UX/UI Design:** Mr. Chrisotom
+| **Frontend** | React + Vite + Tailwind CSS + Framer Motion |
+| **Backend** | Node.js (Express) + Supabase (PostgreSQL) |
+| **Design** | Vanilla CSS (Glassmorphism) + GSAP Animations |
+| **Deployment** | Vercel (Frontend & Serverless Backend) |
 
 ---
 
@@ -83,12 +38,25 @@ Our platform redefines what digital wellness means — blending technology with 
 
 ```bash
 # Clone the repo
-git clone https://github.com/chrisszlycoen/mindlink.git
+git clone https://github.com/dojdev153/MINDLINK.git
 cd mindlink
 
-# Install dependencies
+# Install dependencies for Client
+cd mindlink-vite
+npm install
+
+# Install dependencies for Server
+cd ../server
 npm install
 
 # Run development server
+cd ../mindlink-vite
 npm run dev
+```
 
+---
+
+## 🔒 Security
+ChromaCare takes security seriously. We use **Supabase Auth** for secure registration and custom encryption protocols for all ASRH-related interactions.
+
+© 2026 CHROMACARE. All rights reserved. Kigali, Rwanda.
