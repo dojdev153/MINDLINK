@@ -15,9 +15,16 @@ export default function WaitlistSection() {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [alreadyJoined, setAlreadyJoined] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Check if user has already joined in this browser
+    const hasJoined = localStorage.getItem('cc_waitlist_joined');
+    if (hasJoined) {
+      setAlreadyJoined(true);
+    }
+
     waitlistAPI.count()
       .then(res => setWaitlistCount(res.count))
       .catch(console.error);
@@ -31,6 +38,9 @@ export default function WaitlistSection() {
     try {
       await waitlistAPI.join(formData);
       setSubmitted(true);
+      // Persist the status
+      localStorage.setItem('cc_waitlist_joined', 'true');
+      
       // Wait a bit for the success animation then redirect
       setTimeout(() => {
         navigate('/success');
@@ -65,7 +75,31 @@ export default function WaitlistSection() {
 
         <div style={{ maxWidth: '440px', margin: '0 auto' }}>
           <AnimatePresence mode="wait">
-            {!submitted ? (
+            {alreadyJoined ? (
+              <motion.div
+                key="already-joined"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="glass-card"
+                style={{ padding: '48px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}
+              >
+                <div className="card-sheen" />
+                <div style={{ position: 'relative', zIndex: 2 }}>
+                  <div style={{
+                    width: '64px', height: '64px', borderRadius: '50%',
+                    background: 'rgba(0,200,212,0.1)', border: '1px solid rgba(0,200,212,0.3)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: '20px', margin: '0 auto 20px auto'
+                  }}>
+                    <CheckCircle2 size={32} color="#00c8d4" />
+                  </div>
+                  <h3 style={{ fontSize: '20px', color: 'white', fontWeight: 700, marginBottom: '8px' }}>You're already in!</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>
+                    You've already secured your spot. We will notify you as soon as the ChromaCare mobile app is ready for deployment.
+                  </p>
+                </div>
+              </motion.div>
+            ) : !submitted ? (
               <motion.div
                 key="form"
                 initial={{ opacity: 0, y: 40 }}
@@ -189,7 +223,7 @@ export default function WaitlistSection() {
                     <CheckCircle2 size={40} color="#00c8d4" />
                   </div>
                   <h3 style={{ fontSize: '24px', color: 'white', fontWeight: 700, marginBottom: '12px' }}>You're on the list!</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.6)' }}>Thank you for registering. Check your email for a confirmation message.</p>
+                  <p style={{ color: 'rgba(255,255,255,0.6)' }}>Thank you for registering. We'll notify you as soon as the ChromaCare mobile app is ready for deployment.</p>
                 </div>
               </motion.div>
             )}
