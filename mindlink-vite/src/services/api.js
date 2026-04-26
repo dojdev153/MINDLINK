@@ -1,4 +1,9 @@
 const getBaseURL = () => {
+  // Check for environment variable first (standard for production/Vercel)
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+
   const { hostname } = window.location;
   // If we're on a local network IP, use that for the API too
   if (hostname !== 'localhost' && hostname !== '127.0.0.1') {
